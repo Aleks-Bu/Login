@@ -1,0 +1,159 @@
+html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(#07090c, #1c3046);
+}
+
+.C-login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 41px;
+    transform: translate(-49%, -49%);
+    background: rgba(0, 0, 0, .5);
+    border-radius: 9px;
+}
+
+.C-login h2{
+    margin:  0 0 31px;
+    padding: 0;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.C-login .Caja-usuario{
+    position: relative;
+}
+
+.C-login .Caja-usuario input{
+    width: 100%;
+    padding: 9px 0;
+    font-size: 15px;
+    color: whitesmoke;
+    margin-bottom: 31px;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    outline: none;
+    background: transparent;
+}
+
+.C-login .Caja-usuario label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 11px 0;
+    font-size: 15px;
+    color: whitesmoke;
+    pointer-events: none;
+    transition: .4s;
+}
+
+.C-login .Caja-usuario input:focus ~ label,
+.C-login .Caja-usuario input:valid ~ label{
+    top: -20PX;
+    left: 0;
+    color: #549bf8;
+    font-size: 13PX;
+}
+
+.C-login form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #549bf8;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.C-login a:hover {
+    background: #549bf8;
+    color: whitesmoke;
+    border-radius: 6px;
+    box-shadow: 0 0 6px #549bf8,
+                0 0 26px #549bf8,
+                0 0 51px #549bf8,
+                0 0 100px #549bf8;
+}
+
+.C-login a span{
+    position: absolute;
+    display: block;
+}
+
+.C-login a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #549bf8);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,100% {
+        left: 100%;
+    }
+}
+
+.C-login a span:nth-child(2){
+    top:-100;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #549bf8);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .26s
+}
+
+@keyframes btn-anim2 {
+    0%{
+        top: -100%;
+    }
+    50%,100% {
+        top: 100%;
+    }
+}
+
+.C-login a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg, transparent, #549bf8);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .6s
+}
+
+@keyframes btn-anim3 {
+    0%{
+        right: -100%;
+    }
+    50%,100% {
+        right: 100%;
+    }
+}
+
+.C-login a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #549bf8);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .76s
+}
+
